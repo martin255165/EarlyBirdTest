@@ -17,7 +17,7 @@ namespace EarlyBirdTest.Tests.DAL
                 Width = Kolli.MaxWidth
             };
 
-            var isValid = target.IsValid();
+            var isValid = target.IsValid;
 
             Assert.IsFalse(isValid);
         }
@@ -34,7 +34,7 @@ namespace EarlyBirdTest.Tests.DAL
                 Width = Kolli.MaxWidth
             };
 
-            var isValid = target.IsValid();
+            var isValid = target.IsValid;
 
             Assert.IsFalse(isValid);
         }
@@ -50,7 +50,7 @@ namespace EarlyBirdTest.Tests.DAL
                 Width = Kolli.MaxWidth
             };
 
-            var isValid = target.IsValid();
+            var isValid = target.IsValid;
 
             Assert.IsFalse(isValid);
         }
@@ -66,7 +66,7 @@ namespace EarlyBirdTest.Tests.DAL
                 Width = Kolli.MaxWidth + 1
             };
 
-            var isValid = target.IsValid();
+            var isValid = target.IsValid;
 
             Assert.IsFalse(isValid);
         }
@@ -83,7 +83,7 @@ namespace EarlyBirdTest.Tests.DAL
                 Width = Kolli.MaxWidth
             };
 
-            var isValid = target.IsValid();
+            var isValid = target.IsValid;
 
             Assert.IsTrue(isValid);
         }

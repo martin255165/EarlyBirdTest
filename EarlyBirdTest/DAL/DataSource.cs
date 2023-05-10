@@ -12,7 +12,7 @@ namespace EarlyBirdTest.DAL
             {
                 new Kolli()  //valid kolli
                 {
-                    KolliId = "0r5aTbreiGAbs0SjEP",
+                    KolliId = "999111111111111111",
                     Height = Kolli.MaxHeight,
                     Length = Kolli.MaxLength,
                     Weight = Kolli.MaxWeight,
@@ -20,7 +20,7 @@ namespace EarlyBirdTest.DAL
                 },
                 new Kolli()  //invalid kolli
                 {
-                    KolliId = "li2D2mUnjgOydnTQgd",
+                    KolliId = "999222222222222222",
                     Height = Kolli.MaxHeight,
                     Length = Kolli.MaxLength + 1,
                     Weight = Kolli.MaxWeight,

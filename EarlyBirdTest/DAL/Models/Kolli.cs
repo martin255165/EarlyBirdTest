@@ -12,15 +12,15 @@
         public int Length { get; set;}
         public int Height { get; set; }
         public int Width { get; set; }
-
-        public bool IsValid()
-        {
-            var x =
+        public bool IsValid { get
+            {
+                var x =
                 Weight <= MaxWeight &&
                 Length <= MaxLength &&
                 Height <= MaxHeight &&
                 Width <= MaxWidth;
-            return x;
+                return x;
+            } 
         }
     }
 }
