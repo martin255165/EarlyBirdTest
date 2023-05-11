@@ -16,12 +16,11 @@
         { 
             get
             {
-                var x =
-                Weight <= MaxWeight &&
-                Length <= MaxLength &&
-                Height <= MaxHeight &&
-                Width <= MaxWidth;
-                return x;
+                return
+                    Weight <= MaxWeight &&
+                    Length <= MaxLength &&
+                    Height <= MaxHeight &&
+                    Width <= MaxWidth;
             } 
         }
     }

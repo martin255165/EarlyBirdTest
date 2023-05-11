@@ -21,10 +21,10 @@ namespace EarlyBirdTest.DAL
                 new Kolli()  //invalid kolli
                 {
                     KolliId = "999222222222222222",
-                    Height = Kolli.MaxHeight,
+                    Height = Kolli.MaxHeight + 1,
                     Length = Kolli.MaxLength + 1,
-                    Weight = Kolli.MaxWeight,
-                    Width = Kolli.MaxWidth
+                    Weight = Kolli.MaxWeight + 1,
+                    Width = Kolli.MaxWidth + 1
                 }
             };
         }
