@@ -12,7 +12,9 @@
         public int Length { get; set;}
         public int Height { get; set; }
         public int Width { get; set; }
-        public bool IsValid { get
+        public bool IsValid 
+        { 
+            get
             {
                 var x =
                 Weight <= MaxWeight &&

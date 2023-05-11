@@ -1,11 +1,5 @@
-﻿using EarlyBirdTest.DAL.Repositories;
+﻿using NUnit.Framework;
 using EarlyBirdTest.Validations;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EarlyBirdTest.Tests.DAL
 {

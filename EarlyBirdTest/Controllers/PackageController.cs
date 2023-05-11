@@ -43,5 +43,27 @@ namespace EarlyBirdTest.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
+        [HttpPost]
+        public ActionResult Post([FromBody] Kolli kolli)
+        {
+            try
+            {
+                _kolliService.InsertKolli(kolli);
+                return Ok();
+            }
+            catch (KolliInvalidException kiEx)
+            {
+                return BadRequest(kiEx.Message);
+            }
+            catch (KolliAlreadyExistsException kaeEx)
+            {
+                return BadRequest(kaeEx.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
     }
 }

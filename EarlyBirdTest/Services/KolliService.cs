@@ -1,11 +1,8 @@
-﻿using EarlyBirdTest.DAL.Models;
+﻿using FluentValidation.Results;
+using EarlyBirdTest.DAL.Models;
 using EarlyBirdTest.DAL.Repositories;
 using EarlyBirdTest.Exceptions;
 using EarlyBirdTest.Validations;
-using FluentValidation.Results;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System.Text;
 
 namespace EarlyBirdTest.Services
 {
@@ -37,6 +34,23 @@ namespace EarlyBirdTest.Services
             return kolli;
         }
 
+        public void InsertKolli(Kolli kolli)
+        {
+            KolliIdValidator kolliIdValidator = new KolliIdValidator();
+            ValidationResult kolliIdValidationresults = kolliIdValidator.Validate(kolli.KolliId);
 
+            KolliValidator kolliValidator = new KolliValidator();
+            ValidationResult kolliValidationresults = kolliValidator.Validate(kolli);
+
+            if (!kolliIdValidationresults.IsValid || !kolliValidationresults.IsValid)
+                throw new KolliInvalidException(
+                    kolliIdValidationresults.GetValidationErrors(), 
+                    kolliValidationresults.GetValidationErrors());
+
+            if (_kolliRepository.KolliExists(kolli.KolliId))
+                throw new KolliAlreadyExistsException(kolli.KolliId);
+
+            _kolliRepository.InsertKolli(kolli);
+        }
     }
 }
