@@ -8,9 +8,9 @@ namespace EarlyBirdTest.Services
 {
     public class KolliService
     {
-        private readonly KolliRepository _kolliRepository;
+        private readonly IKolliRepository _kolliRepository;
 
-        public KolliService(KolliRepository kolliRepository)
+        public KolliService(IKolliRepository kolliRepository)
         {
             _kolliRepository = kolliRepository ?? throw new ArgumentNullException(nameof(kolliRepository));
         }

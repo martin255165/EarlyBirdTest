@@ -2,7 +2,7 @@
 using EarlyBirdTest.DAL.Models;
 using EarlyBirdTest.Validations;
 
-namespace EarlyBirdTest.Tests.DAL
+namespace EarlyBirdTest.Tests.Validators
 {
     [TestFixture]
     public class KolliValidatorTest

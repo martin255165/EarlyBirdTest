@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using EarlyBirdTest.Validations;
 
-namespace EarlyBirdTest.Tests.DAL
+namespace EarlyBirdTest.Tests.Validators
 {
     [TestFixture]
     public class KolliIdValidatorTest
@@ -20,7 +20,7 @@ namespace EarlyBirdTest.Tests.DAL
             var kolliId = "99911111111111111a";
 
             var results = systemUnderTest.Validate(kolliId);
-             
+
             Assert.IsNotNull(results);
             Assert.IsFalse(results.IsValid);
             Assert.AreEqual(results.GetValidationErrors(), "KolliId must be numeric.");
@@ -75,7 +75,7 @@ namespace EarlyBirdTest.Tests.DAL
             Assert.IsTrue(results.Errors.Count == 3);
         }
 
-       [Test]
+        [Test]
         public void KolliId_Correct_ValidationSucceeds()
         {
             var kolliId = "999111111111111111";

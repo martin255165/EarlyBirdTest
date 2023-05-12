@@ -2,7 +2,7 @@
 
 namespace EarlyBirdTest.DAL.Repositories
 {
-    public class KolliRepository
+    public class KolliRepository : IKolliRepository
     {
         public List<Kolli> GetAllKollis()
         {

@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<KolliRepository>();
+builder.Services.AddScoped<IKolliRepository, KolliRepository>();
 builder.Services.AddScoped<KolliService>();
 
 var app = builder.Build();
