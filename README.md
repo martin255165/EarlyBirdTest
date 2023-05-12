@@ -7,6 +7,6 @@ I have made unit tests for most of the components in the project but not for end
 
 To validate KolliIds and Kolli objects I have used the nuget package FluentValidation. With FluentValidation you can create collections of validation rules for a class that is then applied to an object of that class to validate it.
 
-For unit tests I have used NUnit3.
+For unit tests I have used NUnit3 and moq.
 
 The project is developed .Net 6.
